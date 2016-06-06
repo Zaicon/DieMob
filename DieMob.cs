@@ -345,7 +345,7 @@ namespace DieMob
 								NPC npc = Main.npc[i];
 								if ((npc.friendly && Region.AffectFriendlyNPCs) ||
                                     (!npc.friendly && npc.SpawnedFromStatue && Region.AffectStatueSpawns) ||
-                                    (!npc.friendly && !npc.SpawnedFromStatue && npc.value > 0))
+                                    (!npc.friendly && !npc.SpawnedFromStatue /*&& npc.value > 0*/))
 								{
 									if (Region.TSRegion.InArea((int)(Main.npc[i].position.X / 16), (int)(Main.npc[i].position.Y / 16)))
 									{
